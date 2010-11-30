@@ -1,0 +1,4 @@
+%ul
+  - @broadcasts.each do |broadcast|
+    %li
+      =link_to broadcast.name, broadcast_path(broadcast)

@@ -1,0 +1,21 @@
+%hr
+= form_for [:admin, @broadcast] do |f|
+  = render :partial => "form", :locals => {:f => f}
+  %br
+  = f.submit
+
+%br
+Prezenterzy:
+%br
+%ol
+  - @presenters_links.each do |presenter|
+    %li
+      =form_tag(delete_presenter_admin_broadcast_path(@broadcast), :method => "delete") do
+        = presenter.user.email
+        = hidden_field_tag  :presenter_id, presenter.id
+        = submit_tag "Usuń"
+%br
+Dodaj prezentera:
+=form_tag(add_presenter_admin_broadcast_path(@broadcast), :method => "post") do
+  = collection_select( :presenter , :user_id, @users, :id, :email)
+  = submit_tag "Dodaj"

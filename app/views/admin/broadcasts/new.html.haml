@@ -1,0 +1,5 @@
+= form_for [:admin, @broadcast], :url => {:controller => 'admin/broadcasts' ,:action => 'create'} do |f|
+  = render :partial => "form", :locals => {:f => f}
+  = collection_select( :presenter , :user_id, @users, :id, :email)
+  %br
+  = f.submit

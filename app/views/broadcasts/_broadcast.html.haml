@@ -1,0 +1,19 @@
+%div.broadcast
+  %h3
+    =broadcast.name
+  %br
+  = broadcast.description
+  %br
+  Dzień: 
+  = broadcast.day
+  %br
+  Godzina: 
+  = broadcast.hour_start
+  \- 
+  = broadcast.hour_end
+  -# dorobic helpera, ktory zamieni dzie na tekst
+  %p
+    Prezenterzy:
+    %br
+    - presenters.each do |presenter|
+      = presenter.email

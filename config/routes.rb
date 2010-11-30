@@ -1,5 +1,17 @@
 Projekt::Application.routes.draw do
+  devise_for :users
+
   root :to => "homes#index"
+  resources :broadcasts
+  namespace :admin do
+    root :to => "homes#index"
+    resources :broadcasts do
+      member do
+        delete :delete_presenter
+        post :add_presenter
+      end
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

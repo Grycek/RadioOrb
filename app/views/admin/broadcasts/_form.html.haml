@@ -1,0 +1,17 @@
+%p
+  Nazwa:
+  =f.text_field :name
+%p
+  Opis:
+  %br
+  =f.text_area :description
+%p
+  Dzień:
+  = f.select :day, 0..6
+%p
+  Godzina:
+  %br
+  Start:
+  = f.select :hour_start, 0..23
+  Koniec
+  = f.select :hour_end, 0..23

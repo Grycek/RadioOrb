@@ -1,0 +1,9 @@
+= link_to "Nowa audycja", new_admin_broadcast_path
+%br
+%p
+  Edytuj:
+  %br
+  %ul
+    - @broadcasts.each do |broadcast|
+      %li
+        = link_to broadcast.name, edit_admin_broadcast_path(broadcast)

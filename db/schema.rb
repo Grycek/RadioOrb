@@ -10,11 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101130151449) do
+ActiveRecord::Schema.define(:version => 20101204113511) do
 
   create_table "broadcast_archives", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "date"
+    t.text     "description"
   end
 
   create_table "broadcasts", :force => true do |t|

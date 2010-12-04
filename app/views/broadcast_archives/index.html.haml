@@ -1,0 +1,12 @@
+= link_to "Dodaj audycję", new_broadcast_broadcast_archive_path(@broadcast)
+%ol
+  - @broadcast_archives.each do |broadcast_archive|
+    %li
+      %p
+        %Opis:
+        %br
+        = broadcast_archive.description
+        %br
+        %Data
+        %br
+        = broadcast_archive.date

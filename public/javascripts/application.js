@@ -4,3 +4,7 @@
 $(function() {
   $("#date_field").datepicker();
 });
+
+$(function() {
+  $(".date_pick").datepicker();
+});

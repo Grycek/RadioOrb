@@ -1,1 +1,5 @@
 = render :partial => 'broadcast', :locals => {:broadcast => @broadcast, :presenters => @presenters}
+%br
+%b
+  = link_to "Archiwum:", broadcast_broadcast_archives_path(@broadcast)
+-#= render :partial => 'broadcast_archives/index.html.haml', :locals => {:broadcast_archives => @broadcast_archives}  

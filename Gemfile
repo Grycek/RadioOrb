@@ -6,6 +6,7 @@ gem 'devise'
 gem 'meta_search'
 gem 'jquery-rails'
 gem "will_paginate", "~> 3.0.pre2"
+gem 'validates_timeliness', '~> 3.0.2'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0.1"
